@@ -17,10 +17,10 @@ app.use(cors());
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
+    host: "postgresql-flat-60114",
     user: "viktor",
     password: " ",
-    database: "face-recognition"
+    database: "smart-brainer"
   }
 });
 
