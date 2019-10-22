@@ -10,6 +10,7 @@ const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 
