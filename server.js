@@ -17,16 +17,14 @@ app.use(cors());
 const db = knex({
   client: "pg",
   connection: {
-    host: "postgresql-flat-60114",
-    user: "viktor",
-    password: " ",
-    database: "smart-brainer"
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
 // USERS
 app.get("/", (req, res) => {
-  res.send('it is working');
+  res.send("it is working");
 });
 
 app.post("/signin", (req, res) => {
